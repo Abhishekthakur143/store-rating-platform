@@ -6,7 +6,6 @@
    `npm i && npm run db && npm run seed && npm start`
 3. Frontend: `cd frontend && npm i && npm run dev` (http://localhost:5173)
 
-Default admin: admin@example.com / Admin@123
 
 ## Roles
 - Admin: dashboard, add users/stores, filter + sortable lists, user details
