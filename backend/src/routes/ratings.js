@@ -21,7 +21,7 @@ router.get('/store/:storeId', async (req, res) => {
   }
 });
 
-router.post('/', auth, authenticatedWriteLimiter, async (req, res) => {
+router.post('/', authenticatedWriteLimiter, auth, async (req, res) => {
   try {
     const { storeId, rating, review } = req.body;
 

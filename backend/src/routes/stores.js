@@ -65,7 +65,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.post('/', auth, authenticatedWriteLimiter, adminOnly, async (req, res) => {
+router.post('/', authenticatedWriteLimiter, auth, adminOnly, async (req, res) => {
   try {
     const { name, address, description } = req.body;
 
