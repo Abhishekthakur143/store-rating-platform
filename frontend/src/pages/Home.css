@@ -1,0 +1,74 @@
+.hm-hero{position:relative;display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center;padding:72px 56px;border-radius:28px;color:#fff;overflow:hidden;
+background:radial-gradient(600px 300px at 85% 10%,rgba(242,165,22,.28),transparent 60%),radial-gradient(500px 400px at 0% 100%,rgba(23,117,111,.7),transparent 60%),linear-gradient(135deg,#062c2b,#0a3f3d 55%,#0e5a57)}
+.hm-hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.12) 1px,transparent 1px);background-size:26px 26px;mask-image:linear-gradient(to bottom,#000,transparent 85%);pointer-events:none}
+.hm-copy,.hm-preview{position:relative}
+.hm-badge{display:inline-block;font-size:.8rem;font-weight:700;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#ffe3a3}
+.hm-copy h1{font-size:3.2rem;font-weight:800;letter-spacing:-.02em;line-height:1.08;margin:18px 0 16px}
+.hm-copy p{color:#c9e3e0;font-size:1.1rem;max-width:48ch;margin:0}
+.hm-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hm-trust{display:flex;gap:22px;flex-wrap:wrap;list-style:none;padding:0;margin:30px 0 0;color:#a9cfcb;font-size:.92rem;font-weight:600}
+.hm-trust li::before{content:"✓";color:var(--accent);margin-right:8px}
+.hm-card{position:relative;background:#fff;color:var(--ink);border-radius:20px;padding:22px;display:grid;gap:14px;box-shadow:0 30px 60px rgba(0,0,0,.35);transform:rotate(-1.5deg)}
+.hm-tag{position:absolute;top:-12px;right:18px;background:var(--accent);color:#1d1500;font-size:.72rem;font-weight:800;padding:4px 10px;border-radius:999px}
+.hm-top{display:flex;gap:12px;align-items:center}.hm-top b{display:block}.hm-top span{color:var(--mute);font-size:.88rem}
+.hm-av{width:46px;height:46px;border-radius:12px;background:#e3f0ee;color:var(--brand);display:grid;place-items:center;font-weight:800;font-size:1.3rem}
+.hm-score{display:flex;align-items:baseline;gap:12px}.hm-score strong{font-size:3rem;line-height:1;font-weight:800}
+.hm-stars{color:#e59a00;letter-spacing:2px}
+.hm-bars{display:grid;gap:6px;font-size:.8rem;color:var(--mute)}.hm-bars>div{display:grid;grid-template-columns:28px 1fr 34px;gap:8px;align-items:center}
+.hm-bars i{display:block;height:8px;border-radius:8px;background:#efece3;overflow:hidden}
+.hm-bars u{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,#f2a516,#ffc54d);animation:hm-grow 1.1s ease-out both}
+@keyframes hm-grow{from{width:0}}
+.hm-rate{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px dashed var(--line);font-size:.9rem;font-weight:600}
+.hm-float{position:absolute;left:-18px;bottom:-16px;background:#fff;color:var(--brand);font-weight:700;font-size:.85rem;padding:10px 16px;border-radius:12px;box-shadow:0 14px 30px rgba(0,0,0,.28)}
+.hm-float::before{content:"✓";margin-right:8px;color:#fff;background:var(--brand);border-radius:50%;padding:1px 6px;font-size:.75rem}
+.hm-sec{padding:64px 4px 0}.hm-sec h2{font-size:2rem;font-weight:800;letter-spacing:-.01em;margin:0 0 6px}
+.hm-sub{color:var(--mute);margin:0 0 24px}.hm-sec>h2+.hm-roles{margin-top:22px}
+.hm-feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.hm-feat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;transition:transform .2s,box-shadow .2s}
+.hm-feat:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(20,35,43,.08)}
+.hm-ico{display:grid;place-items:center;width:46px;height:46px;border-radius:13px;background:var(--tint);color:var(--brand);font-size:1.25rem;margin-bottom:14px}
+.hm-feat h3{margin:0 0 6px}.hm-feat p{margin:0;color:var(--mute)}
+.hm-roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.hm-role{background:linear-gradient(160deg,#0a3f3d,#0e5a57);color:#fff;border-radius:20px;padding:26px}
+.hm-role h3{margin:0 0 14px;font-size:1.25rem}.hm-role ul{list-style:none;padding:0;margin:0;display:grid;gap:9px;color:#d5ebe8}
+.hm-role li::before{content:"✓";color:var(--accent);margin-right:10px;font-weight:800}
+.hm-steps{list-style:none;counter-reset:s;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.hm-steps li{counter-increment:s;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;display:grid;gap:6px}
+.hm-steps li::before{content:counter(s);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--accent);color:#1d1500;font-weight:800}
+.hm-steps span{color:var(--mute)}
+.hm-final{margin:64px 0 8px;text-align:center;padding:56px 24px;border-radius:28px;color:#fff;background:linear-gradient(135deg,#0a3f3d,#0e5a57)}
+.hm-final h2{margin:0 0 8px;font-size:2rem;font-weight:800}.hm-final p{margin:0 0 22px;color:#c9e3e0}
+@media(max-width:860px){.hm-hero{grid-template-columns:1fr;padding:44px 24px}.hm-copy h1{font-size:2.3rem}.hm-card{transform:none}.hm-float{left:8px}.hm-sec{padding-top:48px}}
+@media(prefers-reduced-motion:reduce){.hm-bars u{animation:none}.hm-feat{transition:none}}
+ 
+/* buttons v2 (body prefix so these win over styles.css) */
+body button{position:relative;overflow:hidden;cursor:pointer;font-weight:700;letter-spacing:.01em;
+background:linear-gradient(180deg,#14736f,#0e5a57);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 2px 6px rgba(14,90,87,.3);
+transition:transform .15s,box-shadow .2s,background .2s,color .2s}
+body button::before{content:"";position:absolute;top:0;left:-120%;width:55%;height:100%;transform:skewX(-20deg);pointer-events:none;
+background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);transition:left .6s}
+body button:hover::before{left:140%}
+body button:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 10px 22px rgba(14,90,87,.35)}
+body button:active{transform:translateY(0) scale(.97);box-shadow:inset 0 2px 4px rgba(0,0,0,.25)}
+body button:focus-visible{outline:3px solid rgba(242,165,22,.75);outline-offset:3px}
+body button:disabled{opacity:.55;cursor:not-allowed;transform:none;box-shadow:none}
+body button.ghost{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(20,35,43,.08)}
+body button.ghost:hover{background:var(--tint);box-shadow:0 8px 18px rgba(20,35,43,.12)}
+body button.link,body button.nav,body button.brand,body .sinput button{background:none;box-shadow:none;overflow:visible}
+body button.link::before,body button.nav::before,body button.brand::before,body .sinput button::before{display:none}
+body button.link:hover,body button.brand:hover,body .sinput button:hover{transform:none;box-shadow:none}
+body button.nav{color:#cfe6e3}body button.nav:hover{background:rgba(255,255,255,.1);transform:translateX(3px);box-shadow:none}
+body button.nav.on{background:var(--accent);color:#1d1500}
+body .sinput button{color:#d6d3c8}body .sinput button.on{color:var(--accent)}
+body .sinput button:hover,body .sinput button:active{transform:scale(1.2)}
+body button.big{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;font-size:1.05rem;border-radius:12px}
+body button.big::after{content:"\2192";transition:transform .2s}
+body button.big:hover::after{transform:translateX(6px)}
+body button.accent{background:linear-gradient(180deg,#ffbd3d,#f2a516);color:#1d1500;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 10px 24px rgba(242,165,22,.45)}
+body button.accent:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 16px 34px rgba(242,165,22,.65)}
+body button.glass{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.4);box-shadow:none;backdrop-filter:blur(6px)}
+body button.glass:hover{background:#fff;color:var(--brand2);box-shadow:0 12px 28px rgba(0,0,0,.28)}
+.hm-cta .accent{animation:hm-pulse 2.8s ease-in-out infinite}
+@keyframes hm-pulse{0%,100%{box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 10px 24px rgba(242,165,22,.45)}50%{box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 10px 40px rgba(242,165,22,.85)}}
+@media(prefers-reduced-motion:reduce){body button,body button::before,body button.big::after{transition:none}body button:hover,body button:active{transform:none}.hm-cta .accent{animation:none}}
+ 
