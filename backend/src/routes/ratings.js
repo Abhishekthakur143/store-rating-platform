@@ -1,6 +1,7 @@
 const express = require('express');
 const { Rating, Store, User } = require('../models');
 const { auth } = require('../middleware/auth');
+const { authenticatedWriteLimiter } = require('../middleware/rateLimit');
 
 const router = express.Router();
 
@@ -20,7 +21,7 @@ router.get('/store/:storeId', async (req, res) => {
   }
 });
 
-router.post('/', auth, async (req, res) => {
+router.post('/', auth, authenticatedWriteLimiter, async (req, res) => {
   try {
     const { storeId, rating, review } = req.body;
 

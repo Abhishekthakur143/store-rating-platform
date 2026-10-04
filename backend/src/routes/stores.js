@@ -2,6 +2,7 @@ const express = require('express');
 const { Op, fn, col } = require('sequelize');
 const { Store, Rating } = require('../models');
 const { auth, adminOnly } = require('../middleware/auth');
+const { authenticatedWriteLimiter } = require('../middleware/rateLimit');
 
 const router = express.Router();
 
@@ -64,7 +65,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.post('/', auth, adminOnly, async (req, res) => {
+router.post('/', auth, authenticatedWriteLimiter, adminOnly, async (req, res) => {
   try {
     const { name, address, description } = req.body;
 
