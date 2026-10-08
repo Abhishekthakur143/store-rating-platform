@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const API = import.meta.env.VITE_API || 'http://localhost:5000/api';
+const API = import.meta.env.VITE_API_URL || 'https://store-rating-platform-xq6w.onrender.com/api';
 
 export async function api(path, method = 'GET', body) {
   const r = await fetch(API + path, {
