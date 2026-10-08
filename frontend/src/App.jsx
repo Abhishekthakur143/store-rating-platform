@@ -3,7 +3,8 @@ import axios from 'axios';
 import './App.css';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+
+const API = `${import.meta.env.VITE_API_URL || 'https://store-rating-platform-xq6w.onrender.com'}/api`;
 });
 
 function StarRating({ value, onChange }) {
